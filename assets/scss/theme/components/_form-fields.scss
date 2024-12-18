@@ -1,0 +1,98 @@
+
+.field-clear-select,
+.field-clear-input {
+	--bs-bg-opacity: 1;
+	background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+	font-size: 1.17188rem !important;
+	padding-right: .25rem !important;
+	padding-left: .25rem !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+
+.input-group,
+.form-field:not(.checkbox-list) {
+	> :first-child {
+		border-top-left-radius: var(--bs-border-radius-pill) !important;
+		border-bottom-left-radius: var(--bs-border-radius-pill) !important;
+	}
+	> :last-child {
+		border-top-right-radius: var(--bs-border-radius-pill) !important;
+		border-bottom-right-radius: var(--bs-border-radius-pill) !important;
+	}
+	.select2-selection--single, .select2-selection--multiple {
+		border-top-right-radius: var(--bs-border-radius-pill) !important;
+		border-bottom-right-radius: var(--bs-border-radius-pill) !important;
+	}
+	.select2-container--krajee-bs5 .select2-selection--multiple {
+		min-height: 2.4rem;
+	}
+	.select2-container .select2-search--inline .select2-search__field {
+		margin-top: 7px !important;
+	}
+	.select2-container--krajee-bs5 .select2-selection--multiple .select2-selection__choice {
+		margin: 0.25rem 0 0 0.25rem !important;
+		padding: 0rem 0.0rem 0rem 0.25rem !important;
+	}
+}
+
+.input-group:not(.input-group-sm):not(.date) {
+	> input.form-control {
+		padding: 7px 15px !important;
+	}
+}
+
+.rightbar-list {
+	.select2-selection--single, .select2-selection--multiple {
+		border-radius: var(--bs-border-radius-pill) !important;
+	}
+}
+
+.form-control-sm {
+	.select2-selection--single, .select2-selection--multiple {
+		height: 32px;
+	}
+}
+
+.select2-selection--multiple .select2-search__field {
+  margin: 0 0.5rem !important;
+}
+
+input.form-control-sm {
+	height: 32px;
+}
+
+input.form-control:not([data-datepicker-type]):not([data-datetimepicker-type]):not(.form-field):not(.file-caption-name) {
+	border-radius: var(--bs-border-radius-pill) !important;
+}
+
+input.form-control.file-caption-name {
+	border-top-left-radius: var(--bs-border-radius-pill) !important;
+	border-bottom-left-radius: var(--bs-border-radius-pill) !important;
+}
+
+.input-group.input-group-sm.date {
+	input {
+		padding: 8.5px 15px !important;
+	}
+}
+
+.field-clear-select, .field-clear-input {
+	> span {
+		margin-left: 5px;
+	}
+}
+
+.settings-div {
+	.highlight-addon {
+		margin: 5px 0px !important;
+	}
+	.settings-row > :first-child {
+		margin: 5px 0px !important;
+	}
+}
+
+.datepicker {
+	z-index: 10000 !important;
+}

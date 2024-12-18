@@ -1,0 +1,128 @@
+
+// Fixed width icon
+.fw-icon {
+  text-align: center;
+  width: 1.25em;
+  display: inline-block;
+}
+
+.icon-xs {
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 0.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-sm {
+  height: 2rem;
+  width: 2rem;
+  font-size: 0.7em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-md {
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 0.9em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-lg {
+  height: 3rem;
+  width: 3rem;
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-xl {
+  height: 4rem;
+  width: 4rem;
+  font-size: 1.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-xxl {
+  height: 5.125rem;
+  width: 5.125rem;
+  font-size: 2em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// bootstrap icon line height
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  line-height: 1.5;
+}
+
+.bi {
+  &::before {
+    padding-right: 4px;
+  }
+  &.bi_dot::before {
+    padding: 0px;
+  }
+  &.text_doc::before {
+    line-height: 1.2;
+  }
+}
+
+.icon-text, .icon-text-show {
+  display: inline-flex;
+  padding-right: 0.25rem !important;
+}
+
+.fa_icon::before {
+  font-size: 20px;
+  padding-right: 4px;
+}
+
+.paperclip_bagde {
+  height: 19px;
+}
+
+#notifDropdown {
+  .badge-notif {
+    top: 2px;
+    right: 2px;
+  }
+  .bi-bell-fill::before {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .icon-text {
+    display: none;
+  }
+  .bi.no_text::before {
+    padding: 0;
+  }
+}
+
+.offcanvas-body {
+  .bi::before {
+    padding-right: 15px;
+  }
+  .fa_icon {
+    width: 45px;
+    height: 16px;
+    &::before {
+      padding: 0;
+      margin: auto;
+      display: table;
+    }
+  }
+}

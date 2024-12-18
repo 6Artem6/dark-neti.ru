@@ -1,0 +1,31 @@
+
+html[data-theme="dark"] {
+  background-color: rgb(25, 26, 31);
+  .offcanvas {
+    background-color: rgb(25, 26, 31);
+  }
+  .online-circle-lg, .online-circle-md, .online-circle-sm {
+    border-color: $black !important;
+  }
+  .btn-outline-light {
+    color: $black;
+  }
+  .field-clear-select {
+    border-color: white;
+  }
+  input, textarea, select {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #e1e4e6;
+  }
+
+  .input-group-text {
+    border: 1px solid #e1e4e6;
+  }
+
+  .preloader {
+    .preloader-img {
+      background-image: url('/logo/logo-sm-dark.svg');
+    }
+  }
+}

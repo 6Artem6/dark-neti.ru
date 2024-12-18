@@ -1,0 +1,45 @@
+
+.feed-nav,
+.question-nav {
+	> li {
+		> a, > button {
+			font-size: 11px !important;
+			width: 100%;
+		}
+	}
+}
+
+.feed-answer-nav,
+.feed-comment-nav {
+	> li {
+		> a, > button {
+			font-size: 10px !important;
+			width: 100%;
+		}
+	}
+}
+
+.comment-buttons .nav-item {
+	max-width: 165px;
+}
+
+.spinner-dot {
+  background-color: #a1a1a8;
+  display: inline-block;
+  height: 4px;
+  margin: 2px;
+  border-radius: 50%;
+  width: 4px;
+}
+
+.helped {
+	font-size: 20px;
+	padding-left: 10.5px;
+}
+
+
+@media (max-width: 649px) {
+  .nav-divider {
+    font-size: 80%;
+  }
+}

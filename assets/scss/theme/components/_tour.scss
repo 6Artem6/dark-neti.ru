@@ -1,0 +1,80 @@
+
+.shepherd-element {
+	border-radius: 20px;
+}
+
+.shepherd-text {
+	text-align: justify;
+	padding: 20px;
+}
+
+.shepherd-title, .shepherd-text {
+	color: rgba(var(--bs-secondary-rgb), 1) !important;
+}
+
+.shepherd-element, .shepherd-content, .shepherd-arrow::before {
+	background: rgba(var(--bs-light-rgb), 0.7) !important;
+	backdrop-filter: blur(5px);
+}
+
+html[data-theme=dark] {
+	.shepherd-header, .shepherd-footer {
+		background: rgba(var(--bs-dark-rgb), 0.9) !important;
+	}
+}
+
+html[data-theme=light] {
+	.shepherd-header, .shepherd-footer {
+		background: rgba(var(--bs-white-rgb), 0.9) !important;
+	}
+}
+
+.shepherd-header {
+	border-radius: 20px 20px 0 0 !important;
+}
+
+.shepherd-text {
+	background: rgba(var(--bs-light-rgb), 0.7) !important;
+}
+
+.shepherd-footer {
+	padding: 10px;
+	border-radius: 0 0 20px 20px !important;
+}
+
+
+@media (max-width: 500px) {
+	.shepherd-title {
+		font-size: 13px !important;
+	}
+	.shepherd-text {
+		font-size: 12px !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.tour-div {
+		max-width: 85%;
+	}
+	.shepherd-title, .shepherd-text {
+		font-size: 14px !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.tour-welcome-div {
+		max-width: 90%;
+	}
+	.tour-div {
+		max-width: 75%;
+	}
+}
+
+@media (min-width: 768px) {
+	.tour-welcome-div {
+		max-width: 450px;
+	}
+	.tour-div {
+		max-width: 300px;
+	}
+}

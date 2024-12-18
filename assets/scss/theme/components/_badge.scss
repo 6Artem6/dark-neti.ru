@@ -1,0 +1,96 @@
+
+.badge-div {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	max-width: 300px;
+  	max-height: 300px;
+	&, * {
+		box-sizing: border-box;
+	}
+	&.badge-background {
+		width: 100%;
+		height: auto;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	&:hover .badge-layer{
+		opacity: 1;
+	}
+	img {
+		max-width: 100%;
+	}
+	.badge-layer, .badge-inactive {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		padding: 15px;
+		-moz-transition: all 0.4s ease-in-out 0s;
+		-webkit-transition: all 0.4s ease-in-out 0s;
+		-ms-transition: all 0.4s ease-in-out 0s;
+		transition: all 0.4s ease-in-out 0s;
+	}
+	.badge-layer {
+		opacity: 0;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.badge-inactive {
+		opacity: 1;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.badge-text {
+		text-align: center;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 80%;
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		p {
+			margin-bottom: 2px;
+		}
+	}
+	@media (min-width: 768px) {
+		.badge-text {
+			p {
+				line-height: 11px;
+			}
+		}
+		.badge-info {
+			font-size: 10px;
+		}
+	}
+	@media (max-width: 767px) {
+		.badge-info {
+			font-size: 9px;
+		}
+	}
+	@media (max-width: 450px) {
+		.badge-text {
+			p {
+				line-height: 10px;
+			}
+		}
+	}
+	@media (max-width: 350px) {
+		.badge-text {
+			p {
+				line-height: 9px;
+			}
+		}
+	}
+	.badge-progress {
+		font-size: 11px;
+	}
+}

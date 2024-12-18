@@ -1,0 +1,67 @@
+ 
+// button loader
+.div-loader {
+  height: 50px;
+  position: relative;
+  text-align: center;
+  .load-icon {
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .load-text {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.div-loader.active {
+  .load-text {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .load-icon {
+    display: block;
+  }
+}
+
+// Spinner dots
+.spinner-dots {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-dot {
+  background-color: $gray-500;
+  display: inline-block;
+  height: 4px;
+  margin: 2px;
+  border-radius: 50%;
+  width: 4px;
+}
+
+@keyframes dot {
+  0% { background-color: $gray-500; transform: scale(1); }
+  50% { background-color: $light-gray; transform: scale(1.3); }
+  100% { background-color: $gray-500; transform: scale(1); }
+}
+
+// button link loader active
+.btn-link-loader.active {
+  .spinner-dots { 
+    .spinner-dot { 
+      animation: dot ease-in-out 1s infinite;
+    }
+    .spinner-dot:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+    .spinner-dot:nth-of-type(3) {
+    animation-delay: 0.3s;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+
+html[data-theme="light"] {
+  background-color: rgb(239, 242, 246);
+  .offcanvas {
+    background-color: rgb(239, 242, 246);
+  }
+  .online-circle-lg, .online-circle-md, .online-circle-sm {
+    border-color: $white !important;
+  }
+  .btn-outline-light {
+    color: $black;
+  }
+  input, textarea, select {
+    background-color: white !important;
+  }
+
+  .preloader {
+    .preloader-img {
+      background-image: url('/logo/logo-sm.svg');
+    }
+  }
+}

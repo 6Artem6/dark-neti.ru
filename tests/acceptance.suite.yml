@@ -1,0 +1,18 @@
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+            url: http://localhost:8888/
+            browser: firefox
+            port: 9515
+            restart: true
+            capabilities:
+                os: Windows
+                os_version: 10
+                browser_version: 86
+                resolution: 1366x768
+                tunnel: true # for local testing
+        - Yii2:
+            part: orm
+            entryScript: index-test.php
+            cleanup: false

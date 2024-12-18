@@ -1,0 +1,28 @@
+
+.logo-lg {
+	max-width: 228px;
+}
+
+.logo-md, .logo-sm {
+	max-height: 65px;
+}
+
+.logo-text {
+	max-width: 267px;
+}
+
+.avatar-img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.badge-div {
+	max-width: 300px;
+  max-height: 300px;
+}
+
+@media (max-width: 991px) {
+  .offcanvas-logo {
+    height: 70px;
+  }
+}

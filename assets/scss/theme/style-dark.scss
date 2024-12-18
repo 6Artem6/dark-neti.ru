@@ -1,0 +1,64 @@
+@import "../../../vendor/bower-asset/bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+
+// scss-docs-start import-stack
+// Configuration
+@import "../../../vendor/bower-asset/bootstrap/scss/functions";
+// bootstrap break
+
+
+@import "../../../vendor/bower-asset/bootstrap/scss/variables";
+@import "variables";
+@import "dark/variables-dark";
+
+
+// bootstrap contine
+@import "../../../vendor/bower-asset/bootstrap/scss/maps";
+@import "../../../vendor/bower-asset/bootstrap/scss/mixins";
+@import "../../../vendor/bower-asset/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../../../vendor/bower-asset/bootstrap/scss/root";
+@import "../../../vendor/bower-asset/bootstrap/scss/reboot";
+@import "../../../vendor/bower-asset/bootstrap/scss/type";
+@import "../../../vendor/bower-asset/bootstrap/scss/images";
+@import "../../../vendor/bower-asset/bootstrap/scss/containers";
+@import "../../../vendor/bower-asset/bootstrap/scss/grid";
+@import "../../../vendor/bower-asset/bootstrap/scss/tables";
+@import "../../../vendor/bower-asset/bootstrap/scss/forms";
+@import "../../../vendor/bower-asset/bootstrap/scss/buttons";
+@import "../../../vendor/bower-asset/bootstrap/scss/transitions";
+@import "../../../vendor/bower-asset/bootstrap/scss/dropdown";
+@import "../../../vendor/bower-asset/bootstrap/scss/button-group";
+@import "../../../vendor/bower-asset/bootstrap/scss/nav";
+@import "../../../vendor/bower-asset/bootstrap/scss/navbar";
+@import "../../../vendor/bower-asset/bootstrap/scss/card";
+@import "../../../vendor/bower-asset/bootstrap/scss/accordion";
+@import "../../../vendor/bower-asset/bootstrap/scss/breadcrumb";
+@import "../../../vendor/bower-asset/bootstrap/scss/pagination";
+@import "../../../vendor/bower-asset/bootstrap/scss/badge";
+@import "../../../vendor/bower-asset/bootstrap/scss/alert";
+@import "../../../vendor/bower-asset/bootstrap/scss/progress";
+@import "../../../vendor/bower-asset/bootstrap/scss/list-group";
+@import "../../../vendor/bower-asset/bootstrap/scss/close";
+@import "../../../vendor/bower-asset/bootstrap/scss/toasts";
+@import "../../../vendor/bower-asset/bootstrap/scss/modal";
+@import "../../../vendor/bower-asset/bootstrap/scss/tooltip";
+@import "../../../vendor/bower-asset/bootstrap/scss/popover";
+@import "../../../vendor/bower-asset/bootstrap/scss/carousel";
+@import "../../../vendor/bower-asset/bootstrap/scss/spinners";
+@import "../../../vendor/bower-asset/bootstrap/scss/offcanvas";
+@import "../../../vendor/bower-asset/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../../../vendor/bower-asset/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../../vendor/bower-asset/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+
+// Configuration
+@import "custom";
+@import "components";

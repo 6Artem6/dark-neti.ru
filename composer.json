@@ -1,0 +1,87 @@
+{
+	"name": "yiisoft/yii2-app-basic",
+	"description": "Yii 2 Basic Project Template",
+	"keywords": ["yii2", "framework", "basic", "project template"],
+	"homepage": "http://www.yiiframework.com/",
+	"type": "project",
+	"license": "BSD-3-Clause",
+	"support": {
+		"issues": "https://github.com/yiisoft/yii2/issues?state=open",
+		"forum": "http://www.yiiframework.com/forum/",
+		"wiki": "http://www.yiiframework.com/wiki/",
+		"irc": "irc://irc.freenode.net/yii",
+		"source": "https://github.com/yiisoft/yii2"
+	},
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=8.1.0",
+		"yiisoft/yii2": "~2.0.14",
+		"yiisoft/yii2-bootstrap5": "*",
+		"yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+		"twbs/bootstrap-icons": "^1.9",
+		"components/font-awesome": "^6.1.2",
+		"bower-asset/font-awesome": "^6.2",
+		"npm-asset/imageviewer": "^1.1",
+		"npm-asset/shepherd.js": "^10.0",
+		"npm-asset/slick-slider": "^1.8",
+		"npm-asset/smooth-scrollbar": "^8.7",
+		"jdenticon/jdenticon": "^1.0",
+		"aws/aws-sdk-php": "^3.235",
+		"longman/telegram-bot": "^0.79.0",
+		"smalot/pdfparser": "^2.2.1",
+		"erusev/parsedown": "^1.7.4",
+		"phpoffice/phpword": "^0.18",
+		"phpoffice/phpspreadsheet": "^1.25",
+		"phpoffice/phppresentation": "^1.0"
+	},
+	"require-dev": {
+		"yiisoft/yii2-debug": "~2.1.0",
+		"yiisoft/yii2-httpclient": "~2.0.0",
+		"yiisoft/yii2-swiftmailer": "~2.1.0",
+		"kartik-v/yii2-widget-activeform": "@dev",
+		"kartik-v/yii2-widget-datepicker": "@dev",
+		"kartik-v/yii2-widget-datetimepicker": "@dev",
+		"kartik-v/yii2-widget-fileinput": "@dev",
+		"kartik-v/yii2-widget-select2": "@dev"
+	},
+	"config": {
+		"process-timeout": 1800,
+		"fxp-asset": {
+			"enabled": false
+		},
+		"allow-plugins": {
+			"yiisoft/yii2-composer": true
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"yii\\composer\\Installer::postInstall"
+		],
+		"post-create-project-cmd": [
+			"yii\\composer\\Installer::postCreateProject",
+			"yii\\composer\\Installer::postInstall"
+		]
+	},
+	"extra": {
+		"yii\\composer\\Installer::postCreateProject": {
+			"setPermission": [
+				{
+					"runtime": "0777",
+					"web/assets": "0777",
+					"yii": "0755"
+				}
+			]
+		},
+		"yii\\composer\\Installer::postInstall": {
+			"generateCookieValidationKey": [
+				"config/web.php"
+			]
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"name": "DARK-NETi",
+	"short_name": "DARK-NETi",
+	"lang": "ru",
+	"start_url": "/",
+	"scope": "/",
+	"categories": ["education"],
+	"display": "standalone",
+	"icons": [
+		{
+			"src": "/favicon.ico",
+			"sizes": "any"
+		}
+	],
+	"browser_action": {
+		"default_icon": [
+			{
+				"src": "/favicon.ico",
+				"sizes": "any"
+			}
+		]
+	}
+}

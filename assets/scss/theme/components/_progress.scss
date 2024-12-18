@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+$progress-bg-color: #34495e;
+$progress-circle-color: #1abc9c;
+$progress-default-size: 1em;
+$progress-label-font-size: $progress-default-size / 4;
+$progress-label-font-size-redo: $progress-default-size * 4;
+
+@mixin size($progress-width, $progress-height) {
+	height: $progress-height;
+	width: $progress-width;
+}
+
+@mixin draw-progress($progress-percent, $progress-color) {
+	.pie {
+		.half-circle {
+			border-color: $progress-color;
+		}
+
+		.left-side {
+			transform: rotate($progress-percent * 3.6deg);
+		}
+
+		@if $progress-percent <= 50 {
+			.right-side {
+				display: none;
+			}
+		} @else {
+			clip: rect(auto, auto, auto, auto);
+
+			.right-side {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.progress-div {
+	*,
+	*:before,
+	*:after {
+		box-sizing: border-box;
+	}
+}
+
+.set-size {
+	font-size: 10em;
+}
+
+.charts-container {
+	&:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+.pie-wrapper {
+	@include size($progress-default-size, $progress-default-size);
+	float: left;
+	margin: 15px;
+	position: relative;
+
+	&:nth-child(3n + 1) {
+		clear: both;
+	}
+
+	.pie {
+		@include size(100%, 100%);
+		clip: rect(0, $progress-default-size, $progress-default-size, $progress-default-size / 2);
+		left: 0;
+		position: absolute;
+		top: 0;
+
+		.half-circle {
+			@include size(100%, 100%);
+			border: ($progress-default-size / 10) solid #3498db;
+			border-radius: 50%;
+			clip: rect(0, $progress-default-size / 2, $progress-default-size, 0);
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+	}
+
+	.label {
+		background: $progress-bg-color;
+		border-radius: 50%;
+		bottom: $progress-label-font-size-redo / 10;
+		color: #ecf0f1;
+		cursor: default;
+		display: block;
+		font-size: $progress-label-font-size;
+		left: $progress-label-font-size-redo / 10;
+		line-height: $progress-label-font-size-redo * .70;
+		position: absolute;
+		right: $progress-label-font-size-redo / 10;
+		text-align: center;
+		top: $progress-label-font-size-redo / 10;
+
+		.smaller {
+			color: #bdc3c7;
+			font-size: .45em;
+			padding-bottom: 20px;
+			vertical-align: super;
+		}
+	}
+
+	.shadow {
+		@include size(100%, 100%);
+		border: $progress-default-size / 10 solid #bdc3c7;
+		border-radius: 50%;
+	}
+
+	&.style-2 {
+		.label {
+			background: none;
+			color: #7f8c8d;
+
+			.smaller {
+				color: #bdc3c7;
+			}
+		}
+	}
+
+	&.progress-5 {
+		@include draw-progress(5, $progress-circle-color);
+	}
+
+	&.progress-10 {
+		@include draw-progress(10, $progress-circle-color);
+	}
+
+	&.progress-20 {
+		@include draw-progress(20, $progress-circle-color);
+	}
+
+	&.progress-25 {
+		@include draw-progress(25, $progress-circle-color);
+	}
+
+	&.progress-30 {
+		@include draw-progress(30, $progress-circle-color);
+	}
+
+	&.progress-40 {
+		@include draw-progress(40, $progress-circle-color);
+	}
+
+	&.progress-50 {
+		@include draw-progress(50, $progress-circle-color);
+	}
+
+	&.progress-60 {
+		@include draw-progress(60, $progress-circle-color);
+	}
+
+	&.progress-70 {
+		@include draw-progress(70, $progress-circle-color);
+	}
+
+	&.progress-75 {
+		@include draw-progress(75, $progress-circle-color);
+	}
+
+	&.progress-80 {
+		@include draw-progress(80, $progress-circle-color);
+	}
+
+	&.progress-90 {
+		@include draw-progress(90, $progress-circle-color);
+	}
+
+	&.progress-100 {
+		@include draw-progress(100, $progress-circle-color);
+	}
+}
